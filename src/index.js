@@ -4,10 +4,10 @@ const { bip32, payments, address } = require('bitcoinjs-lib')
     , ethUtil = require('ethereumjs-util')
 
 function fromMnemonic(mnemonic, password, isTestnet) {
-  BIP84.fromSeed.call(this, mnemonic, password, isTestnet, 195)
+  BIP84.fromMnemonic.call(this, mnemonic, password, isTestnet, 195)
 }
 
-fromMnemonic.prototype = Object.create(BIP84.fromSeed.prototype)
+fromMnemonic.prototype = Object.create(BIP84.fromMnemonic.prototype)
 
 function fromZPrv(zprv) {
   BIP84.fromZPrv.call(this, zprv)
